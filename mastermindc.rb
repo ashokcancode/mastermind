@@ -1,3 +1,11 @@
+def playbyuser(m,n)
+  attemptcode=[]
+puts "put the values you want to select as you option"
+  usercfc=gets.chomp.split('')
+usercfc.each{|v| attemptcode.append(n[v.to_i])}
+puts attemptcode.join(' ')
+  
+end
 puts 'mastermind'
 puts 'for codesetter type 1 for codebreaker type 2'
 userc=gets.chomp.to_i
@@ -20,4 +28,5 @@ else
   mastercode = codevalues.sample(4)
 dismastercode= mastercode.join(' ')
 puts 'a mastercode has been set now try to break it'
+playbyuser(mastercode,codevalues)
 end
